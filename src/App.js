@@ -14,7 +14,7 @@ const App = () => {
   useEffect(() => {
     const fetchData = () => {
       axios
-        .get(`https://swapi.dev/api/people/?page=1`)
+        .get(`https://swapi.dev/api/people`)
         .then((res) => {
           console.log(res);
           setStarWarsData(res.data);
@@ -28,9 +28,9 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1 className="Header">Characters</h1>
-      {starWars.map((el) => {
-        return <Character charactersName={el.name} />;
+      <h1 className="Header">React Wars</h1>
+      {starWars.map((el, i) => {
+        return <Character key={`${i}`} charactersName={el.name} />;
       })}
     </div>
   );
