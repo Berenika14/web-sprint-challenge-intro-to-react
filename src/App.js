@@ -30,7 +30,13 @@ const App = () => {
     <div className="App">
       <h1 className="Header">React Wars</h1>
       {starWars.map((el, i) => {
-        return <Character key={`${i}`} charactersName={el.name} />;
+        return (
+          <Character
+            key={`${i}`}
+            charactersName={el.name}
+            year={el.birth_year}
+          />
+        );
       })}
     </div>
   );
