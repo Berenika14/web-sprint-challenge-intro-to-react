@@ -4,11 +4,11 @@ import styled from "styled-components";
 const StyledCharacters = styled.div`
   display: flex;
   justify-content: space-between;
-  margin-left: 12em;
   padding: 45px;
-  border: 3px solid green;
+  border: 1px solid green;
+  margin: 0.3em;
+  margin-left: 12em;
   width: 60%;
-  height: 100%;
   color: white;
   opacity: 0.6;
   :hover {
@@ -18,7 +18,9 @@ const StyledCharacters = styled.div`
   background-color: black;
 `;
 const StyledYears = styled.div`
-  background-color: #86bdcd;
+  background-color: #6c7375;
+  border-radius: 5px 15px;
+  color: purple;
 `;
 //Write your Character component here
 const Character = (props) => {
